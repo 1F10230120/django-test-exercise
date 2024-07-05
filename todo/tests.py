@@ -46,7 +46,7 @@ class TodoviewTestCase(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.templates[0].name, 'todo/index.html')
-        self.assertEqual(len(response.context['tasks']),0)
+        self.assertEqual(len(response.context['tasks']), 0)
 
     def test_index_post(self):
         client = Client()
